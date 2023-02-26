@@ -1,0 +1,33 @@
+.input {
+    color: var(--text-color-btn);
+    font-size: 0.9rem;
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: var(--bg-color-btn);
+    width: 200px;
+    box-sizing: border-box;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: 2px solid black;
+}
+
+input:hover {
+    background: #6c6c6c;
+    box-shadow: 0 0 5px 5px rgba(138, 43, 226, 0.33);
+}
+
+.submit {
+    font-family: 'Courier New', monospace;
+    background-color: var(--bg-color-btn);
+    color: var(--text-color-btn);
+    border-radius: 8px;
+    border: 2px double black;
+    height: 45px;
+    margin-left: 50px;
+}
+
+.submit:hover {
+    background-color: #8a2be2;
+    box-shadow: 0 0 5px 5px rgba(138, 43, 226, 0.33);
+    color: #fff;
+    border: 2px double black;
+}

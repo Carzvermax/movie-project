@@ -1,0 +1,37 @@
+.prev_button{
+    color: var(--text-color-btn);
+    background-color: var(--bg-color-btn);
+    cursor: pointer;
+    font-size: 17px;
+    margin-left: 370px;
+    width: 200px;
+    font-family: 'Courier New', monospace;
+    border-radius: 50px;
+    box-sizing: border-box;
+    border: 4px double black;
+}
+
+.next_button{
+    color: var(--text-color-btn);
+    background-color: var(--bg-color-btn);
+    cursor: pointer;
+    font-size: 17px;
+    margin: 20px;
+    width: 200px;
+    font-family: 'Courier New', monospace;
+    border-radius: 50px;
+    box-sizing: border-box;
+    border: 4px double black;
+}
+
+.next_button:hover {
+    background-color: #8a2be2;
+    box-shadow:  0 0 5px 5px rgba(138, 43, 226, 0.33);
+    color: #fff;
+}
+
+.prev_button:hover {
+    background-color: #8a2be2;
+    box-shadow:  0 0 5px 5px rgba(138, 43, 226, 0.33);
+    color: #fff;
+}

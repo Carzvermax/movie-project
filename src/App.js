@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from 'react';
+import {Navigate, Route, Routes} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import {MainLayout} from "./layouts";
+import {GenresFilmPage, MovieDetailsPage, MoviesPage, SearchFilmPage} from "./pages";
+import {genreActions} from "./redux";
 
-export default App;
+const App = () => {
+    const {genres} = useSelector(state => state.genres);
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(genreActions.getAll());
+    }, [dispatch]);
+
+    if (genres !== []) {
+        localStorage.setItem('Genres', JSON.stringify(genres));
+    }
+    return (
+        <Routes>
+            <Route path={'/'} element={<MainLayout/>}>
+                <Route index element={<Navigate to={'movies'}/>}/>
+                <Route path={'movies'} element={<MoviesPage/>}/>
+                <Route exact path={'/movies/:id'} element={<MovieDetailsPage/>}/>
+                <Route path={'/genre-movies'} element={<GenresFilmPage/>}/>
+                <Route path={'/search-movies'} element={<SearchFilmPage/>}/>
+            </Route>
+        </Routes>
+    );
+};
+
+export {App};

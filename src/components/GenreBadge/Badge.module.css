@@ -1,0 +1,26 @@
+.badge_text {
+    color: var(--text-color-btn);
+    width: auto;
+}
+.badge_bg{
+    margin: 3px;
+    box-sizing: border-box;
+    background: silver;
+    border-radius: 10px;
+    font-size: 15px;
+
+}
+.badge_bg:hover {
+    margin: 3px;
+    background-color: #8a2be2;
+    color: white;
+    border-radius: 10px;
+}
+.badge_text:hover {
+    color: white;
+    border-radius: 10px;
+}
+
+.badge_text > span:hover {
+    cursor: pointer;
+}

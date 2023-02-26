@@ -1,0 +1,12 @@
+.genresContainer{
+    top:25px;
+    margin-top: 120px;
+    box-sizing: border-box;
+    padding-right: 1100px;
+    position: absolute;
+}
+
+.genresContainer > h3{
+    color: var(--bg-color-btn);
+    font-family: 'Comic Sans MS', sans-serif;
+}
